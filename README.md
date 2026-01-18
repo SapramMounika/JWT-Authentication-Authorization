@@ -31,6 +31,7 @@ This project implements stateless authentication and authorization using JWT (JS
 * Maven
 
 #### 3. Core Concepts
+
 ##### Authentication
 
 * Authentication verifies who the user is.
@@ -72,11 +73,13 @@ com.example.jwtsecurity
 #### 5. Database Design
 
 users table
-Column	          Type	        Description
-id	              bigint	    Primary key
-username	      varchar	    Unique username
-password	      varchar	    User password
-role	          varchar	    User role
+
+|Column| Type| Description|
+| :---: | :---:|
+|id|bigint| Primary key|
+|username| varchar| Unique username|
+|password| varchar| User password|
+|role| varchar| User role
 
 #### 6. Authentication Flow (Login)
 
@@ -94,6 +97,7 @@ role	          varchar	    User role
 
 ##### Login Endpoint
 POST /auth/login
+
 ##### Request Body
 {
   "username": "user",
