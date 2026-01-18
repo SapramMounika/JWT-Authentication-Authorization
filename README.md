@@ -119,7 +119,7 @@ POST /auth/login
 
 JWT is signed using a secret key.
 
-### 8. Authorization Flow (Protected APIs)
+#### 8. Authorization Flow (Protected APIs)
 
 1. Client calls /api/**
 
@@ -136,7 +136,7 @@ JWT is signed using a secret key.
 ##### Authorization Header Format
 Authorization: Bearer <JWT_TOKEN>
 
-### 9. JwtFilter Responsibilities
+#### 9. JwtFilter Responsibilities
 
 * Executes before controllers
 
@@ -148,7 +148,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 * Sets authentication in SecurityContext
 
-### 10. Spring Security Configuration
+#### 10. Spring Security Configuration
 
 ##### Key rules:
 
@@ -162,7 +162,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 * JwtFilter added to filter chain
 
-### 11. Protected API Example
+#### 11. Protected API Example
 GET /api/hello
 ##### Without Token
 
@@ -170,7 +170,8 @@ Response: 401 / 403
 
 ##### With Token
 Hello, JWT Protected API!
-### 12. Error Handling Behavior
+
+#### 12. Error Handling Behavior
 
 
 | Scenario | Result |
@@ -178,9 +179,9 @@ Hello, JWT Protected API!
 |Invalid credentials| Login failure |
 |Missing token|	401 Unauthorized|
 |Invalid token|	401 Unauthorized|
-Valid token	Access granted
+|Valid token|	Access granted|
 
-### 13. Security Benefits
+#### 13. Security Benefits
 
 * Stateless authentication
 
@@ -190,7 +191,7 @@ Valid token	Access granted
 
 * Secure API access
 
-### 14. Future Enhancements
+#### 14. Future Enhancements
 
 * Password encryption (BCrypt)
 
@@ -200,11 +201,11 @@ Valid token	Access granted
 
 * Global exception handling
 
-### 15. Summary
+#### 15. Summary
 
 This project demonstrates a clean and secure JWT-based authentication & authorization mechanism using Spring Boot. Login generates a token, and protected APIs validate the token using a custom security filter.
 
-### 16. How to Run
+#### 16. How to Run
 
 1. Configure PostgreSQL in application.properties
 
@@ -214,7 +215,7 @@ This project demonstrates a clean and secure JWT-based authentication & authoriz
 
 4. Use token to access /api/**
 
-### 17. Maintainer Notes
+#### 17. Maintainer Notes
 
 * JWT filter must skip auth endpoints
 
