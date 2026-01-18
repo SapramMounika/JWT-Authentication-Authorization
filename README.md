@@ -75,11 +75,11 @@ com.example.jwtsecurity
 users table
 
 |Column| Type| Description|
-| :---: | :---:|
+| :---: | :---: |:---:|
 |id|bigint| Primary key|
 |username| varchar| Unique username|
 |password| varchar| User password|
-|role| varchar| User role
+|role| varchar| User role|
 
 #### 6. Authentication Flow (Login)
 
